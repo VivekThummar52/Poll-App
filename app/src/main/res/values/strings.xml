@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Vivek Practical Nov 1</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="str_create_poll">Create poll</string>
+    <string name="str_create_a_poll">Create a poll</string>
+    <string name="str_current_poll">Current Poll</string>
+    <string name="str_history">History</string>
+
+    <string name="str_no_polls">The Polling Grounds await your Questions</string>
+    <string name="str_no_history">No History Available. Contribute to the Polls and See your Journey Here.</string>
+    <string name="str_poll_question">Poll Question</string>
+    <string name="str_ask_a_question">Ask a Question</string>
+    <string name="str_answer_options">Answer options</string>
+    <string name="str_add_option">Add option</string>
+    <string name="str_option_drag_handle">Option Drag Handle</string>
+    <string name="str_option_hint">Option</string>
+    <string name="str_option_is_selected">Option is selected</string>
+    <string name="str_remove_option">Remove Option</string>
+
+</resources>
