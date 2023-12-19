@@ -14,7 +14,7 @@ class CurrentPollAdapter(
     private val context: Context,
     private val pollList: ArrayList<Poll>,
     private val shouldEdit: Boolean,
-    private val onOptionSelected: (position: Int) -> Unit,
+    private val onOptionSelected: (position: Int) -> Unit
 ) : ListAdapter<Poll, CurrentPollAdapter.ViewHolder>(PollDiffCallback()) {
 
     class ViewHolder(val binding: ItemCurrentPollsAdapterBinding) : RecyclerView.ViewHolder(binding.root)
