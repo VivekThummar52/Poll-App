@@ -1,4 +1,4 @@
-package com.example.vivekpracticalnov1.architecture
+package com.example.qfonapppractical.architecture
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider

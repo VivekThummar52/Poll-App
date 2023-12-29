@@ -1,7 +1,7 @@
-package com.example.vivekpracticalnov1.roomdbclasses
+package com.example.qfonapppractical.roomdbclasses
 
 import androidx.room.TypeConverter
-import com.example.vivekpracticalnov1.data.Option
+import com.example.qfonapppractical.data.Option
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 

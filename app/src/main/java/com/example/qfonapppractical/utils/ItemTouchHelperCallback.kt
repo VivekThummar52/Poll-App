@@ -1,11 +1,11 @@
-package com.example.vivekpracticalnov1.utils
+package com.example.qfonapppractical.utils
 
 import android.os.Build
 import android.os.VibrationEffect
 import android.os.Vibrator
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.RecyclerView
-import com.example.vivekpracticalnov1.interfaces.ItemTouchHelperAdapter
+import com.example.qfonapppractical.interfaces.ItemTouchHelperAdapter
 
 class ItemTouchHelperCallback(private val adapter: ItemTouchHelperAdapter, private val vibrator: Vibrator) : ItemTouchHelper.Callback() {
 

@@ -1,9 +1,9 @@
-package com.example.vivekpracticalnov1.roomdbclasses
+package com.example.qfonapppractical.roomdbclasses
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 import androidx.room.TypeConverters
-import com.example.vivekpracticalnov1.data.Option
+import com.example.qfonapppractical.data.Option
 
 @Entity(tableName = "polls")
 data class Poll(

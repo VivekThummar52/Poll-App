@@ -1,4 +1,4 @@
-package com.example.vivekpracticalnov1
+package com.example.qfonapppractical
 
 import org.junit.Test
 

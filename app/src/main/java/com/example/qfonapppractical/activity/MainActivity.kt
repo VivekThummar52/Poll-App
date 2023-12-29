@@ -1,4 +1,4 @@
-package com.example.vivekpracticalnov1.activity
+package com.example.qfonapppractical.activity
 
 import android.content.Intent
 import android.os.Bundle
@@ -8,17 +8,19 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.LifecycleObserver
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
-import com.example.vivekpracticalnov1.R
-import com.example.vivekpracticalnov1.architecture.PollRepository
-import com.example.vivekpracticalnov1.architecture.PollViewModel
-import com.example.vivekpracticalnov1.architecture.PollViewModelFactory
-import com.example.vivekpracticalnov1.databinding.ActivityMainBinding
-import com.example.vivekpracticalnov1.fragment.CurrentPollFragment
-import com.example.vivekpracticalnov1.fragment.HistoryFragment
-import com.example.vivekpracticalnov1.roomdbclasses.AppDatabase
+import com.example.qfonapppractical.R
+import com.example.qfonapppractical.architecture.PollRepository
+import com.example.qfonapppractical.architecture.PollViewModel
+import com.example.qfonapppractical.architecture.PollViewModelFactory
+import com.example.qfonapppractical.databinding.ActivityMainBinding
+import com.example.qfonapppractical.fragment.CurrentPollFragment
+import com.example.qfonapppractical.fragment.HistoryFragment
+import com.example.qfonapppractical.roomdbclasses.AppDatabase
 import kotlinx.coroutines.launch
 
 class MainActivity : AppCompatActivity(), LifecycleObserver {
+
+    // Github Token: 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
 
     private lateinit var binding: ActivityMainBinding
 
@@ -49,7 +51,7 @@ class MainActivity : AppCompatActivity(), LifecycleObserver {
             when (it.itemId) {
                 R.id.menu_current_poll -> setCurrentFragment(firstFragment)
                 R.id.menu_history -> {
-                    movePollToHistory()
+                    allPollsObserver()
                     setCurrentFragment(secondFragment)
                 }
             }
@@ -57,12 +59,12 @@ class MainActivity : AppCompatActivity(), LifecycleObserver {
         }
 
         binding.fabCreatePoll.setOnClickListener {
-            movePollToHistory()
+            allPollsObserver()
             startActivity(Intent(this, CreatePollActivity::class.java))
         }
     }
 
-    private fun movePollToHistory() {
+    private fun allPollsObserver() {
         pollViewModel.allPolls.value?.forEach {
             if (it.anyOptionSelected == 1 && it.isPollAnswered == 0) {
                 it.isPollAnswered = 1

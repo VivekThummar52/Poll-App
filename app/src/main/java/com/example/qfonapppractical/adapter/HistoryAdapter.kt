@@ -1,4 +1,4 @@
-package com.example.vivekpracticalnov1.adapter
+package com.example.qfonapppractical.adapter
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -6,9 +6,9 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.example.vivekpracticalnov1.databinding.ItemCurrentPollsAdapterBinding
-import com.example.vivekpracticalnov1.roomdbclasses.Poll
-import com.example.vivekpracticalnov1.utils.PollDiffCallback
+import com.example.qfonapppractical.databinding.ItemCurrentPollsAdapterBinding
+import com.example.qfonapppractical.roomdbclasses.Poll
+import com.example.qfonapppractical.utils.PollDiffCallback
 
 class HistoryAdapter(private val context: Context, private val pollHistoryList: ArrayList<Poll>, private val shouldEdit: Boolean) : ListAdapter<Poll, HistoryAdapter.ViewHolder>(PollDiffCallback()) {
 

@@ -1,3 +1,3 @@
-package com.example.vivekpracticalnov1.architecture
+package com.example.qfonapppractical.architecture
 
 data class PollState(val pollId: Long, val selectedOption: String)

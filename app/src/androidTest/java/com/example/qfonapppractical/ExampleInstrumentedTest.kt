@@ -1,4 +1,4 @@
-package com.example.vivekpracticalnov1
+package com.example.qfonapppractical
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

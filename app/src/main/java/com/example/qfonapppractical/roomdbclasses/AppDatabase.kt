@@ -1,11 +1,11 @@
-package com.example.vivekpracticalnov1.roomdbclasses
+package com.example.qfonapppractical.roomdbclasses
 
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import androidx.room.TypeConverters
-import com.example.vivekpracticalnov1.data.Option
+import com.example.qfonapppractical.data.Option
 
 @Database(entities = [Poll::class, Option::class], version = 1, exportSchema = false)
 @TypeConverters(OptionListConverter::class)

@@ -1,4 +1,4 @@
-package com.example.vivekpracticalnov1.utils
+package com.example.qfonapppractical.utils
 
 import android.content.Context
 import android.util.AttributeSet

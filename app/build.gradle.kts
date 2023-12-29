@@ -5,11 +5,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.vivekpracticalnov1"
+    namespace = "com.example.qfonapppractical"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.vivekpracticalnov1"
+        applicationId = "com.example.qfonapppractical"
         minSdk = 24
         targetSdk = 34
         versionCode = 1

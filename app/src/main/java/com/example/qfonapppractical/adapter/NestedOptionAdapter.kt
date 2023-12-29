@@ -1,11 +1,11 @@
-package com.example.vivekpracticalnov1.adapter
+package com.example.qfonapppractical.adapter
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.vivekpracticalnov1.data.Option
-import com.example.vivekpracticalnov1.databinding.ItemOptionViewBinding
+import com.example.qfonapppractical.data.Option
+import com.example.qfonapppractical.databinding.ItemOptionViewBinding
 
 class NestedOptionAdapter(
     private val options: List<Option>,

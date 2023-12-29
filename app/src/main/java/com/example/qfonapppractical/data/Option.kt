@@ -1,4 +1,4 @@
-package com.example.vivekpracticalnov1.data
+package com.example.qfonapppractical.data
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey

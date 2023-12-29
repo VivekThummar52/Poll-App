@@ -1,7 +1,7 @@
-package com.example.vivekpracticalnov1.utils
+package com.example.qfonapppractical.utils
 
 import androidx.recyclerview.widget.DiffUtil
-import com.example.vivekpracticalnov1.roomdbclasses.Poll
+import com.example.qfonapppractical.roomdbclasses.Poll
 
 class PollDiffCallback : DiffUtil.ItemCallback<Poll>() {
     override fun areItemsTheSame(oldItem: Poll, newItem: Poll): Boolean {

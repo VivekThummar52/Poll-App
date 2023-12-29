@@ -1,11 +1,9 @@
-package com.example.vivekpracticalnov1.roomdbclasses
+package com.example.qfonapppractical.roomdbclasses
 
 import androidx.lifecycle.LiveData
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.Query
-import androidx.room.Update
-import com.example.vivekpracticalnov1.roomdbclasses.Poll
 
 @Dao
 interface PollDao {

@@ -1,4 +1,4 @@
-package com.example.vivekpracticalnov1.fragment
+package com.example.qfonapppractical.fragment
 
 import android.content.Context
 import android.os.Bundle
@@ -7,17 +7,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.vivekpracticalnov1.activity.MainActivity
-import com.example.vivekpracticalnov1.adapter.HistoryAdapter
-import com.example.vivekpracticalnov1.architecture.PollRepository
-import com.example.vivekpracticalnov1.architecture.PollViewModel
-import com.example.vivekpracticalnov1.architecture.PollViewModelFactory
-import com.example.vivekpracticalnov1.databinding.FragmentHistoryBinding
-import com.example.vivekpracticalnov1.roomdbclasses.AppDatabase
-import com.example.vivekpracticalnov1.roomdbclasses.Poll
+import com.example.qfonapppractical.activity.MainActivity
+import com.example.qfonapppractical.adapter.HistoryAdapter
+import com.example.qfonapppractical.architecture.PollViewModel
+import com.example.qfonapppractical.databinding.FragmentHistoryBinding
+import com.example.qfonapppractical.roomdbclasses.Poll
 
 class HistoryFragment : Fragment() {
 

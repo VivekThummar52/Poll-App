@@ -1,4 +1,4 @@
-package com.example.vivekpracticalnov1.activity
+package com.example.qfonapppractical.activity
 
 import android.content.Context
 import android.os.Bundle
@@ -12,15 +12,15 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.vivekpracticalnov1.adapter.CreatePollOptionsAdapter
-import com.example.vivekpracticalnov1.architecture.PollRepository
-import com.example.vivekpracticalnov1.architecture.PollViewModel
-import com.example.vivekpracticalnov1.architecture.PollViewModelFactory
-import com.example.vivekpracticalnov1.data.Option
-import com.example.vivekpracticalnov1.databinding.ActivityCreatePollBinding
-import com.example.vivekpracticalnov1.roomdbclasses.AppDatabase
-import com.example.vivekpracticalnov1.roomdbclasses.Poll
-import com.example.vivekpracticalnov1.utils.ItemTouchHelperCallback
+import com.example.qfonapppractical.adapter.CreatePollOptionsAdapter
+import com.example.qfonapppractical.architecture.PollRepository
+import com.example.qfonapppractical.architecture.PollViewModel
+import com.example.qfonapppractical.architecture.PollViewModelFactory
+import com.example.qfonapppractical.data.Option
+import com.example.qfonapppractical.databinding.ActivityCreatePollBinding
+import com.example.qfonapppractical.roomdbclasses.AppDatabase
+import com.example.qfonapppractical.roomdbclasses.Poll
+import com.example.qfonapppractical.utils.ItemTouchHelperCallback
 
 class CreatePollActivity : AppCompatActivity() {
 

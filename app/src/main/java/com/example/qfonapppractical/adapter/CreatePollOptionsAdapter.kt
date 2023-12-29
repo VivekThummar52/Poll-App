@@ -1,4 +1,4 @@
-package com.example.vivekpracticalnov1.adapter
+package com.example.qfonapppractical.adapter
 
 import android.text.Editable
 import android.text.TextWatcher
@@ -6,8 +6,8 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.view.inputmethod.EditorInfo
 import androidx.recyclerview.widget.RecyclerView
-import com.example.vivekpracticalnov1.databinding.ItemCreatePollOptionLayoutBinding
-import com.example.vivekpracticalnov1.interfaces.ItemTouchHelperAdapter
+import com.example.qfonapppractical.databinding.ItemCreatePollOptionLayoutBinding
+import com.example.qfonapppractical.interfaces.ItemTouchHelperAdapter
 import java.util.Collections
 
 class CreatePollOptionsAdapter(

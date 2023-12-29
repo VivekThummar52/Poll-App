@@ -1,4 +1,4 @@
-package com.example.vivekpracticalnov1.fragment
+package com.example.qfonapppractical.fragment
 
 import android.content.Context
 import android.os.Bundle
@@ -7,20 +7,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
-import androidx.lifecycle.lifecycleScope
-import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.vivekpracticalnov1.activity.MainActivity
-import com.example.vivekpracticalnov1.adapter.CurrentPollAdapter
-import com.example.vivekpracticalnov1.architecture.PollRepository
-import com.example.vivekpracticalnov1.architecture.PollViewModel
-import com.example.vivekpracticalnov1.architecture.PollViewModelFactory
-import com.example.vivekpracticalnov1.databinding.FragmentCurrentPollBinding
-import com.example.vivekpracticalnov1.roomdbclasses.AppDatabase
-import com.example.vivekpracticalnov1.roomdbclasses.Poll
-import com.example.vivekpracticalnov1.utils.LinearLayoutManagerWrapper
-import com.example.vivekpracticalnov1.utils.WrapContentLinearLayoutManager
+import com.example.qfonapppractical.activity.MainActivity
+import com.example.qfonapppractical.adapter.CurrentPollAdapter
+import com.example.qfonapppractical.architecture.PollViewModel
+import com.example.qfonapppractical.databinding.FragmentCurrentPollBinding
+import com.example.qfonapppractical.roomdbclasses.Poll
+import com.example.qfonapppractical.utils.LinearLayoutManagerWrapper
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch

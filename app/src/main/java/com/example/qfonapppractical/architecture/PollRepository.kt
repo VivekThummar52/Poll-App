@@ -1,8 +1,8 @@
-package com.example.vivekpracticalnov1.architecture
+package com.example.qfonapppractical.architecture
 
 import androidx.lifecycle.LiveData
-import com.example.vivekpracticalnov1.roomdbclasses.Poll
-import com.example.vivekpracticalnov1.roomdbclasses.PollDao
+import com.example.qfonapppractical.roomdbclasses.Poll
+import com.example.qfonapppractical.roomdbclasses.PollDao
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 
