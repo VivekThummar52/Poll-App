@@ -13,5 +13,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Vivek Practical Nov 1"
+rootProject.name = "QfonApp Practical"
 include(":app")
