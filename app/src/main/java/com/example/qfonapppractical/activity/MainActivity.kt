@@ -20,8 +20,6 @@ import kotlinx.coroutines.launch
 
 class MainActivity : AppCompatActivity(), LifecycleObserver {
 
-    // Github Token: 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
-
     private lateinit var binding: ActivityMainBinding
 
     lateinit var pollViewModel: PollViewModel
