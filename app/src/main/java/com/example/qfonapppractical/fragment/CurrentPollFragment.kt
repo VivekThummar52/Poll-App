@@ -62,9 +62,9 @@ class CurrentPollFragment : Fragment() {
         pollViewModel.allPolls.observe(viewLifecycleOwner) { polls ->
             currentPollList.clear()
             for (poll in polls) {
-                Log.e("CurrentPollFragment", "update poll check 2 observe: $poll")
                 if (poll.isPollAnswered == 0) {
                     currentPollList.add(poll)
+                    Log.e("CurrentPollFragment", "update poll check 2 observe: $poll")
                 }
             }
             adapter.submitPolls(currentPollList)

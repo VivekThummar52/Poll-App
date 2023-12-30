@@ -28,7 +28,7 @@ class HistoryAdapter(private val context: Context, private val pollHistoryList: 
         holder.binding.questionTextView.text = poll.question
         holder.binding.rvOption.layoutManager = LinearLayoutManager(context, RecyclerView.VERTICAL, false)
         val adapter = NestedOptionAdapter(poll.options, poll.anyOptionSelected, shouldEdit) {
-            // this will be never called because answer selection is not possible in History list
+            // this will never be called because answer selection is not possible in History list
         }
         holder.binding.rvOption.adapter = adapter
     }

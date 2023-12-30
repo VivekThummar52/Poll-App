@@ -51,7 +51,7 @@ class MainActivity : AppCompatActivity(), LifecycleObserver {
             when (it.itemId) {
                 R.id.menu_current_poll -> setCurrentFragment(firstFragment)
                 R.id.menu_history -> {
-                    allPollsObserver()
+                    movePollToHistory()
                     setCurrentFragment(secondFragment)
                 }
             }
@@ -59,19 +59,20 @@ class MainActivity : AppCompatActivity(), LifecycleObserver {
         }
 
         binding.fabCreatePoll.setOnClickListener {
-            allPollsObserver()
+            movePollToHistory()
             startActivity(Intent(this, CreatePollActivity::class.java))
         }
     }
 
-    private fun allPollsObserver() {
+    private fun movePollToHistory() {
         pollViewModel.allPolls.value?.forEach {
             if (it.anyOptionSelected == 1 && it.isPollAnswered == 0) {
                 it.isPollAnswered = 1
                 lifecycleScope.launch {
                     val x = pollViewModel.updatePoll(it)
-                    Log.e("MainActivity", "update poll check 1 movePollToHistory: $x")
+                    Log.e("MainActivity", "update poll check 1 movePollToHistory(DB Record): $x")
                 }
+                Log.e("MainActivity", "update poll check 1 movePollToHistory: $it")
             }
         }
 

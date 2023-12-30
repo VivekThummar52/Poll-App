@@ -53,8 +53,8 @@ class HistoryFragment : Fragment() {
         pollViewModel.allPolls.observe(viewLifecycleOwner) { polls ->
             pollHistoryList.clear()
             for (poll in polls) {
-                Log.e("HistoryFragment", "update poll check 3 observe: $poll")
                 if (poll.isPollAnswered == 1) {
+                    Log.e("HistoryFragment", "update poll check 3 observe: $poll")
                     pollHistoryList.add(poll)
                 }
             }
