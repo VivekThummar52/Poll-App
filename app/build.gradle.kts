@@ -5,11 +5,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.qfonapppractical"
+    namespace = "com.example.pollapp"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.qfonapppractical"
+        applicationId = "com.example.pollapp"
         minSdk = 24
         targetSdk = 34
         versionCode = 1

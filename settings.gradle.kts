@@ -13,5 +13,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "QfonApp Practical"
+rootProject.name = "Poll App"
 include(":app")
