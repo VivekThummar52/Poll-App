@@ -1,1 +1,12 @@
 Poll App developed using MVVM, Coroutines, LiveData, Data binding and Room Database
+
+__Functionality and How app works:__
+1) `MainActivity` with two fragments: `CurrentPollFragment()` and `HistoryFragment()`, a Fab button to launch and create a new Poll in an activity `CreatePollActivity`.
+2) in `CreatePollActivity`, user can add a question and add upto 5 options.
+3) After creating a new poll, it will be shown in `CurrentPollFragment()`, where user can select an option from the list of different polls.
+4) If there's any option selected, and user navigated to the `HistoryFragment()` or will launch an activity `CreatePollActivity`, poll with any options selected, will be moved to the `History` from `Current`. If user exits an app after selecting any options, then also it will moved to the `History` from `Current`.
+5) If there's no option is selected, it will remain in the `CurrentPollFragment()`.
+
+__Current Status:__
+1) After selecting an options, only UI is updating properly, no changes are happening on the data and poll is not moving to the History page.
+2) If user have any option selected, and it exits an app, moving poll to the History is not implemented yet.
