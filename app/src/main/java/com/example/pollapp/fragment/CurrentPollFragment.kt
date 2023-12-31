@@ -2,7 +2,6 @@ package com.example.pollapp.fragment
 
 import android.content.Context
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -12,7 +11,7 @@ import com.example.pollapp.activity.MainActivity
 import com.example.pollapp.adapter.CurrentPollAdapter
 import com.example.pollapp.architecture.PollViewModel
 import com.example.pollapp.databinding.FragmentCurrentPollBinding
-import com.example.pollapp.roomdbclasses.Poll
+import com.example.pollapp.data.Poll
 import com.example.pollapp.utils.LinearLayoutManagerWrapper
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -29,18 +28,11 @@ class CurrentPollFragment : Fragment() {
     override fun onAttach(context: Context) {
         super.onAttach(context)
         this.context = context
-
-        /*val appDatabase = AppDatabase.getDatabase(context)
-        val pollDao = appDatabase.pollDao()
-        val repository = PollRepository(pollDao)
-        val viewModelFactory = PollViewModelFactory(repository)
-        pollViewModel = ViewModelProvider(this, viewModelFactory)[PollViewModel::class.java]*/
         pollViewModel = (requireActivity() as MainActivity).pollViewModel
     }
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+        inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View {
         binding = FragmentCurrentPollBinding.inflate(inflater, container, false)
         prepareRecyclerView()
@@ -52,8 +44,7 @@ class CurrentPollFragment : Fragment() {
         val adapter = CurrentPollAdapter(context, currentPollList, true, onOptionSelected = {
             currentPollList[it].anyOptionSelected = 1
             CoroutineScope(Dispatchers.IO).launch {
-                val x = pollViewModel.updatePoll(currentPollList[it])
-                Log.e("CurrentPollFragment", "update poll check 2 onOptionSelected: $x, poll id = ${currentPollList[it].id}")
+                pollViewModel.updatePoll(currentPollList[it])
             }
         })
         binding.rvCurrentPolls.adapter = adapter
@@ -64,7 +55,6 @@ class CurrentPollFragment : Fragment() {
             for (poll in polls) {
                 if (poll.isPollAnswered == 0) {
                     currentPollList.add(poll)
-                    Log.e("CurrentPollFragment", "update poll check 2 observe: $poll")
                 }
             }
             adapter.submitPolls(currentPollList)
@@ -80,9 +70,5 @@ class CurrentPollFragment : Fragment() {
             binding.rvCurrentPolls.visibility = View.VISIBLE
             binding.tvNoPolls.visibility = View.GONE
         }
-    }
-
-    override fun onDestroyView() {
-        super.onDestroyView()
     }
 }

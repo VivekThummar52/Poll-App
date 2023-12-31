@@ -16,9 +16,7 @@ class NestedOptionAdapter(
 
     private var checkedPosition = -1
 
-    class ViewHolder(val binding: ItemOptionViewBinding) : RecyclerView.ViewHolder(binding.root) {
-
-    }
+    class ViewHolder(val binding: ItemOptionViewBinding) : RecyclerView.ViewHolder(binding.root)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val binding = ItemOptionViewBinding.inflate(LayoutInflater.from(parent.context), parent, false)
@@ -30,7 +28,6 @@ class NestedOptionAdapter(
         val option = options[adapterPosition]
 
         holder.binding.tvOption.text = option.text
-//        holder.binding.optionProgress.progress = option.progress
         holder.binding.optionProgress.setProgressCompat(option.progress, true)
 
         if (option.progress == 100) {
@@ -63,7 +60,6 @@ class NestedOptionAdapter(
                 }
             }
         }
-
     }
 
     override fun getItemCount(): Int {

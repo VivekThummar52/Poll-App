@@ -8,7 +8,7 @@ import android.view.inputmethod.EditorInfo
 import androidx.recyclerview.widget.RecyclerView
 import com.example.pollapp.databinding.ItemCreatePollOptionLayoutBinding
 import com.example.pollapp.interfaces.ItemTouchHelperAdapter
-import java.util.Collections
+import java.util.*
 
 class CreatePollOptionsAdapter(
     private val options: ArrayList<String>,
@@ -41,10 +41,12 @@ class CreatePollOptionsAdapter(
                     onOptionNext(adapterPosition)
                     true
                 }
+
                 EditorInfo.IME_ACTION_DONE -> {
                     onOptionDone()
                     true
                 }
+
                 else -> false
             }
         }
@@ -62,7 +64,6 @@ class CreatePollOptionsAdapter(
             }
 
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-//                options[adapterPosition] = s.toString()
                 val newOption = s.toString()
                 val existingOptions = options.toMutableList()
                 existingOptions.removeAt(adapterPosition)

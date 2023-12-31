@@ -1,9 +1,9 @@
-package com.example.pollapp.roomdbclasses
+package com.example.pollapp.data
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 import androidx.room.TypeConverters
-import com.example.pollapp.data.Option
+import com.example.pollapp.roomdbclasses.OptionListConverter
 
 @Entity(tableName = "polls")
 data class Poll(

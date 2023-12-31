@@ -7,8 +7,4 @@ __Functionality and How app works:__
 4) If there's any option selected, and user navigated to the `HistoryFragment()` or will launch an activity `CreatePollActivity`, poll with any options selected, will be moved to the `History` from `Current`. If user exits an app after selecting any options, then also it will move to the `History` from `Current`.
 5) If there's no option is selected, it will remain in the `CurrentPollFragment()`.
 
-__Current Status:__
-1) After selecting an options, only UI is updating properly, no changes are happening on the data and poll is not moving to the History page.
-2) If user have any option selected, and it exits an app, moving poll to the History is not implemented yet.
-
-__NOTE:__ User can change their selection while poll is in `Current Poll Tab` and moving to History/CreatePollActivity or exiting an app should be considered as Submission as there's no separate button for Submission.
+__Note:__ User can change their selection while poll is in `Current Poll Tab` and moving to History/CreatePollActivity or exiting an app will be considered as Submission as there's no separate button for Submission.

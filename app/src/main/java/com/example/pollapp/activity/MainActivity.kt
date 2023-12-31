@@ -2,7 +2,6 @@ package com.example.pollapp.activity
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.LifecycleObserver
@@ -21,11 +20,7 @@ import kotlinx.coroutines.launch
 class MainActivity : AppCompatActivity(), LifecycleObserver {
 
     private lateinit var binding: ActivityMainBinding
-
     lateinit var pollViewModel: PollViewModel
-    /*val pollViewModel: PollViewModel by lazy {
-        ViewModelProvider(this, viewModelFactory)[PollViewModel::class.java]
-    }*/
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -67,24 +62,10 @@ class MainActivity : AppCompatActivity(), LifecycleObserver {
             if (it.anyOptionSelected == 1 && it.isPollAnswered == 0) {
                 it.isPollAnswered = 1
                 lifecycleScope.launch {
-                    val x = pollViewModel.updatePoll(it)
-                    Log.e("MainActivity", "update poll check 1 movePollToHistory(DB Record): $x")
+                    pollViewModel.updatePoll(it)
                 }
-                Log.e("MainActivity", "update poll check 1 movePollToHistory: $it")
             }
         }
-
-        /*pollViewModel.allPolls.observe(this) { polls ->
-            for (poll in polls) {
-                if (poll.anyOptionSelected == 1 && poll.isPollAnswered == 0) {
-                    poll.isPollAnswered = 1
-                    lifecycleScope.launch {
-                        val x = pollViewModel.updatePoll(poll)
-                        Log.e("MainActivity", "update poll check 1 movePollToHistory: $x")
-                    }
-                }
-            }
-        }*/
     }
 
     private fun setCurrentFragment(fragment: Fragment) = supportFragmentManager.beginTransaction().apply {

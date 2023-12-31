@@ -19,7 +19,7 @@ import com.example.pollapp.architecture.PollViewModelFactory
 import com.example.pollapp.data.Option
 import com.example.pollapp.databinding.ActivityCreatePollBinding
 import com.example.pollapp.roomdbclasses.AppDatabase
-import com.example.pollapp.roomdbclasses.Poll
+import com.example.pollapp.data.Poll
 import com.example.pollapp.utils.ItemTouchHelperCallback
 
 class CreatePollActivity : AppCompatActivity() {
@@ -27,10 +27,9 @@ class CreatePollActivity : AppCompatActivity() {
     private lateinit var binding: ActivityCreatePollBinding
 
     private val optionsList = ArrayList<String>()
+    private lateinit var pollViewModel: PollViewModel
     private lateinit var itemTouchHelper: ItemTouchHelper
     private lateinit var optionsAdapter: CreatePollOptionsAdapter
-
-    private lateinit var pollViewModel: PollViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -70,7 +69,6 @@ class CreatePollActivity : AppCompatActivity() {
 
             override fun afterTextChanged(s: Editable?) {
             }
-
         })
 
         binding.btnAddOption.setOnClickListener {

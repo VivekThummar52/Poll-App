@@ -7,9 +7,16 @@ import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.Recycler
 
 class WrapContentLinearLayoutManager : LinearLayoutManager {
+
     constructor(context: Context?) : super(context)
-    constructor(context: Context?, orientation: Int, reverseLayout: Boolean) : super(context, orientation, reverseLayout)
-    constructor(context: Context?, attrs: AttributeSet?, defStyleAttr: Int, defStyleRes: Int) : super(context, attrs, defStyleAttr, defStyleRes)
+
+    constructor(context: Context?, orientation: Int, reverseLayout: Boolean) : super(
+        context, orientation, reverseLayout
+    )
+
+    constructor(context: Context?, attrs: AttributeSet?, defStyleAttr: Int, defStyleRes: Int) : super(
+        context, attrs, defStyleAttr, defStyleRes
+    )
 
     //... constructor
     override fun onLayoutChildren(recycler: Recycler, state: RecyclerView.State) {

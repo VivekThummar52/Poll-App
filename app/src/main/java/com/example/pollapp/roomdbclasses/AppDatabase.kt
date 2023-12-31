@@ -6,6 +6,7 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 import androidx.room.TypeConverters
 import com.example.pollapp.data.Option
+import com.example.pollapp.data.Poll
 
 @Database(entities = [Poll::class, Option::class], version = 1, exportSchema = false)
 @TypeConverters(OptionListConverter::class)

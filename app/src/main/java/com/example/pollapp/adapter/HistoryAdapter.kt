@@ -7,17 +7,16 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.pollapp.databinding.ItemCurrentPollsAdapterBinding
-import com.example.pollapp.roomdbclasses.Poll
+import com.example.pollapp.data.Poll
 import com.example.pollapp.utils.PollDiffCallback
 
-class HistoryAdapter(private val context: Context, private val pollHistoryList: ArrayList<Poll>, private val shouldEdit: Boolean) : ListAdapter<Poll, HistoryAdapter.ViewHolder>(PollDiffCallback()) {
+class HistoryAdapter(
+    private val context: Context, private val pollHistoryList: ArrayList<Poll>, private val shouldEdit: Boolean
+) : ListAdapter<Poll, HistoryAdapter.ViewHolder>(PollDiffCallback()) {
 
-    class ViewHolder(val binding: ItemCurrentPollsAdapterBinding) : RecyclerView.ViewHolder(binding.root) {
-
-    }
+    class ViewHolder(val binding: ItemCurrentPollsAdapterBinding) : RecyclerView.ViewHolder(binding.root)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        // previous binding was ItemHistoryAdapterBinding
         val binding = ItemCurrentPollsAdapterBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return ViewHolder(binding)
     }

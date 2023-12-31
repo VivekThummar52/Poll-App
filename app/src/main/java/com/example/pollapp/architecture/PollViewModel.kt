@@ -3,10 +3,8 @@ package com.example.pollapp.architecture
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.pollapp.roomdbclasses.Poll
-import kotlinx.coroutines.Dispatchers
+import com.example.pollapp.data.Poll
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
 
 class PollViewModel(private val repository: PollRepository) : ViewModel() {
     val allPolls: LiveData<List<Poll>> = repository.allPolls
@@ -18,8 +16,6 @@ class PollViewModel(private val repository: PollRepository) : ViewModel() {
     }
 
     suspend fun updatePoll(poll: Poll): Int {
-        return withContext(Dispatchers.IO) {
-            repository.updatePoll(poll.id, poll.isPollAnswered)
-        }
+        return repository.updatePoll(poll)
     }
 }

@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.pollapp.databinding.ItemCurrentPollsAdapterBinding
-import com.example.pollapp.roomdbclasses.Poll
+import com.example.pollapp.data.Poll
 import com.example.pollapp.utils.PollDiffCallback
 
 class CurrentPollAdapter(

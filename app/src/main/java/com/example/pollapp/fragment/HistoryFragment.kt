@@ -13,7 +13,7 @@ import com.example.pollapp.activity.MainActivity
 import com.example.pollapp.adapter.HistoryAdapter
 import com.example.pollapp.architecture.PollViewModel
 import com.example.pollapp.databinding.FragmentHistoryBinding
-import com.example.pollapp.roomdbclasses.Poll
+import com.example.pollapp.data.Poll
 
 class HistoryFragment : Fragment() {
 
@@ -26,18 +26,11 @@ class HistoryFragment : Fragment() {
     override fun onAttach(context: Context) {
         super.onAttach(context)
         this.context = context
-
-        /*val appDatabase = AppDatabase.getDatabase(context)
-        val pollDao = appDatabase.pollDao()
-        val repository = PollRepository(pollDao)
-        val viewModelFactory = PollViewModelFactory(repository)
-        pollViewModel = ViewModelProvider(this, viewModelFactory)[PollViewModel::class.java]*/
         pollViewModel = (requireActivity() as MainActivity).pollViewModel
     }
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+        inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View {
         binding = FragmentHistoryBinding.inflate(inflater, container, false)
         prepareRecyclerView()
@@ -76,9 +69,5 @@ class HistoryFragment : Fragment() {
             binding.rvPollHistory.visibility = View.VISIBLE
             binding.tvHistory.visibility = View.GONE
         }
-    }
-
-    override fun onDestroyView() {
-        super.onDestroyView()
     }
 }
