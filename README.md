@@ -10,3 +10,5 @@ __Functionality and How app works:__
 __Current Status:__
 1) After selecting an options, only UI is updating properly, no changes are happening on the data and poll is not moving to the History page.
 2) If user have any option selected, and it exits an app, moving poll to the History is not implemented yet.
+
+__NOTE:__ User can change their selection while poll is in `Current Poll Tab` and moving to History/CreatePollActivity or exiting an app should be considered as Submission as there's no separate button for Submission.
